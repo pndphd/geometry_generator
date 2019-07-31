@@ -35,7 +35,7 @@ import os
 import shutil
 
 
-# Initialize Qt resources from file resources.py
+# Initialize Qt resources from file namedS resources.py
 from .resources import *
 # Import the code for the dialog
 from .geometry_generator_dialog import inSALMOPluginDialog
