@@ -12,8 +12,8 @@ email=pndphd@gmail.com
 
 about=Makes the geometry input files for inSALMO
 
-tracker=github.com
-repository=github.com
+tracker=https://github.com/pndphd/geometry_generator/issues
+repository=https://github.com/pndphd/geometry_generator
 # End of mandatory metadata
 
 # Recommended items:
