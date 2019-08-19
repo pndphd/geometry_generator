@@ -205,7 +205,15 @@ class inSALMOPlugin:
             self.dlg.lineEdit.clear()
             self.dlg.pushButton.clicked.connect(self.select_output_file)
             
-        layers = QgsProject.instance().layerTreeRoot().children()
+        #layers = QgsProject.instance().layerTreeRoot().children()
+        
+        #Load the vector layers into ther combo box
+        layerIDs = QgsProject.instance().layerTreeRoot().findLayerIds()
+        initLayerList = []
+        for layerID in layerIDs:
+            initLayerList.append(QgsProject.instance().mapLayer(layerID))
+        layers = initLayerList
+        
         layer_list = []
         self.dlg.comboBox.clear()
         for layer in layers:
@@ -220,7 +228,7 @@ class inSALMOPlugin:
         if result:
             # get the layer that is selected form ther drop down menu
             selectedLayerIndex = self.dlg.comboBox.currentIndex()
-            layer = layers[selectedLayerIndex].layer()
+            layer = layers[selectedLayerIndex]
             # get ther output file name from ther box
             fileName = self.dlg.lineEdit.text()
             outputFile = open(fileName, 'w')

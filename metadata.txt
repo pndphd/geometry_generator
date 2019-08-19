@@ -6,7 +6,7 @@
 name=Geometry Generator
 qgisMinimumVersion=3.0
 description=Makes the geometry file for inSALMO
-version=0.1
+version=0.3
 author=Peter N. Dudley
 email=pndphd@gmail.com
 
